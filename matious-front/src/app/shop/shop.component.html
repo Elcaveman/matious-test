@@ -1,0 +1,43 @@
+<!-- Resources -->
+<h2 class="title">Products</h2>
+
+<section *ngIf="products" >
+  <!-- usually this should be a componenets that comunicates both ways -->
+  <div id="filters">
+    <select name="dropdown" (change)="filterByCategory($event.target)">
+      <option>all</option>
+      <option *ngFor="let category of categories">{{category}}</option>  
+    </select>
+    <button (click)="sortByPrice()">Trier par Prix:{{priceSortDirection}}</button>
+    <button (click)="sortByRate()">Trier par Rating:{{rateSortDirection}}</button>
+  </div>
+  <div  class="product-grid">
+
+    <ng-container *ngFor="let product of currentPageContent">
+        <app-product [product]="product"></app-product>
+    </ng-container>
+  </div>
+  <select name="pages" (change)="changePage($event.target)">
+    <option *ngFor="let page of pages" [value]="page+1">Page : {{page+1}}</option>  
+  </select>
+</section>
+<ng-container *ngIf="!products">
+  <div class="mosaic-loader">
+    <div class="cell d-0"></div>
+    <div class="cell d-1"></div>
+    <div class="cell d-2"></div>
+    <div class="cell d-3"></div>
+    <div class="cell d-1"></div>
+    <div class="cell d-2"></div>
+    <div class="cell d-3"></div>
+    <div class="cell d-4"></div>
+    <div class="cell d-2"></div>
+    <div class="cell d-3"></div>
+    <div class="cell d-4"></div>
+    <div class="cell d-5"></div>
+    <div class="cell d-3"></div>
+    <div class="cell d-4"></div>
+    <div class="cell d-5"></div>
+    <div class="cell d-6"></div>
+  </div>
+</ng-container>

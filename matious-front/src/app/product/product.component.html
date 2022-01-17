@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <div class="product-img">
+      <img [src]="product.image" height="320" width="250">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{product.title}}</h1>
+        <br />
+        <h2>{{product.category}}</h2>
+        <p>{{product.description}}</p>
+        <div style="display:flex;margin-top:1rem;">
+          <div class="star-rating">
+            <span style="width:10%" [ngStyle]="{'width.%':product.rating.rate*20}">
+            </span>
+          </div>
+          <div style="height: auto;">
+            <p style="height: auto;">count : {{product.rating.count}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-price-btn">
+        <p><span>{{product.price}}</span>$</p>
+        <button type="button">buy now</button>
+      </div>
+    </div>
+  </div>
