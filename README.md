@@ -1,7 +1,7 @@
 # Matious Test - FrontEnd
 
-First of all I'm sorry that the FrontEnd doesn't look as good as it should be and the code is not as optimised as i want it to be. For the simple reason that the past 2 weeks were exam weeks so i only gave 4 hours of my time to make do this test.
-![alt text](demo.jpg?raw=true "App Demo")
+First of all I'm sorry that the FrontEnd doesn't look as good as it should be and the code is not as optimised as I want it to be. For the simple reason that the past 2 weeks were exam weeks so i only gave 4 hours of my time to make do this test. Nonetheless all of the tasks have been completed!
+![Test Demo](https://github.com/Elcaveman/matious-test/blob/main/demo.png)
 ## Instalation
 
 Make sur to have nodeJS installed on your computer, then try to install angular CLI using 
